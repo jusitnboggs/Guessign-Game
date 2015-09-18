@@ -55,11 +55,11 @@
             // Guess
             // 
             this.Guess.AutoSize = true;
-            this.Guess.Location = new System.Drawing.Point(94, 101);
+            this.Guess.Location = new System.Drawing.Point(71, 102);
             this.Guess.Name = "Guess";
-            this.Guess.Size = new System.Drawing.Size(113, 13);
+            this.Guess.Size = new System.Drawing.Size(171, 13);
             this.Guess.TabIndex = 2;
-            this.Guess.Text = "Enter your guess here!";
+            this.Guess.Text = "Enter a number between 0 and 10!";
             // 
             // submit
             // 
@@ -75,6 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(331, 261);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.Guess);
