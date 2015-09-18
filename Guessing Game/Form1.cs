@@ -69,13 +69,13 @@ namespace Guessing_Game
 
             if (theNumber > Convert.ToInt32(InputBox.Text))
             {
-                MessageBox.Show("Guess is too low, please try again");
+                MessageBox.Show("Guess is too low, please try again" + theNumber); // added + theNumber for debug
                 //wrong = true;
             }
 
             if (theNumber < Convert.ToInt32(InputBox.Text))
             {
-                MessageBox.Show("Guess is too high, please try again");
+                MessageBox.Show("Guess is too high, please try again "+ theNumber);
                 // wrong = true;
             }
 
