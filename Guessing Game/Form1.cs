@@ -24,8 +24,9 @@ namespace Guessing_Game
         public GuessingGame()
         {
             InitializeComponent();
+            theNumber = myRandom.Next(10);
 
-            
+
         }
 
 
@@ -43,7 +44,7 @@ namespace Guessing_Game
 
         private void submit_Click(object sender, EventArgs e)
         {
-            theNumber = myRandom.Next(10);
+            
             if (theNumber == Convert.ToInt32(InputBox.Text))
             {
                 MessageBox.Show("Guess is correct - you win!");
@@ -55,6 +56,7 @@ namespace Guessing_Game
                 if (result.ToString().ToLower() == "yes")
                 {
                     InputBox.Clear();
+                    theNumber = myRandom.Next(10);
                 }
 
                 else if (result.ToString().ToLower() == "no")
