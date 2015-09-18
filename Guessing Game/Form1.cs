@@ -12,7 +12,7 @@ namespace Guessing_Game
 {
     public partial class GuessingGame : Form
     {
-        int theNumber;
+        int theNumber;// The random number
 
 
         //Random requirment
@@ -33,8 +33,7 @@ namespace Guessing_Game
 
         private void label1_Click(object sender, EventArgs e)
         {
-            //this also needs to be in a method
-            //theNumber = myRandom.Next(10);
+
         }
 
         private void InputBox_TextChanged(object sender, EventArgs e)
@@ -56,7 +55,9 @@ namespace Guessing_Game
                 if (result.ToString().ToLower() == "yes")
                 {
                     InputBox.Clear();
+                    InputBox.Text = myRandom.Next(10).ToString();
                     theNumber = myRandom.Next(10);
+                    MessageBox.Show("Lets see if random and guess random!");
                 }
 
                 else if (result.ToString().ToLower() == "no")
@@ -71,13 +72,13 @@ namespace Guessing_Game
 
             if (theNumber > Convert.ToInt32(InputBox.Text))
             {
-                MessageBox.Show("Guess is too low, please try again" + theNumber); // added + theNumber for debug
+                MessageBox.Show("Guess is too low, please try again"); // added + theNumber for debug
                 //wrong = true;
             }
 
             if (theNumber < Convert.ToInt32(InputBox.Text))
             {
-                MessageBox.Show("Guess is too high, please try again "+ theNumber);
+                MessageBox.Show("Guess is too high, please try again ");
                 // wrong = true;
             }
 
